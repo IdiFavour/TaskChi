@@ -1,0 +1,34 @@
+typeorm
+node 
+express
+mySql
+ts 
+
+
+transaction history
+login
+transfer
+deposit
+auth 
+bal
+
+
+build a system where 
+a user can create an account
+a user can fund their account 
+a user can transfer funds to another user account in the system 
+a user can withdraw funds from their account
+a user can login to their account
+a user can check their balance 
+a user can check their transaction history
+
+your tasks is to present 
+an implementation of the project(nodeJS api only)
+ensure to write unit test for the project
+
+use this tech stack
+nodeJS
+mySql
+typeScript
+typeorm
+express
