@@ -24,7 +24,7 @@ a user can check their transaction history
 
 your tasks is to present 
 an implementation of the project(nodeJS api only)
-ensure to write unit test for the project
+ensure to arrange the code in a folder structure
 
 use this tech stack
 nodeJS

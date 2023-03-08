@@ -1,26 +1,21 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  OneToOne,
-  JoinColumn,
-} from "typeorm";
+// src/models/transaction.model.ts
 
-import { User } from "./User";
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Transaction {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @OneToOne(() => User)
-  @JoinColumn()
-  senderAccount: User;
+  @Column()
+  senderId: number;
 
-  @OneToOne(() => User)
-  @JoinColumn()
-  recieveAccount: User;
+  @Column()
+  receiverId: number;
 
   @Column()
   amount: number;
+
+  @Column()
+  date: Date;
 }
