@@ -1,10 +1,11 @@
 // src/controllers/auth.controller.ts
 
-import { Request, Response } from "express";
+import { Response } from "express";
 import { AuthService } from "../services/auth.service";
+import { CustomRequest } from "../types";
 
 export class AuthController {
-  public static async login(req: Request, res: Response): Promise<void> {
+  public static async login(req: CustomRequest, res: Response): Promise<void> {
     const authService = new AuthService();
 
     const { username, password } = req.body;
@@ -21,7 +22,7 @@ export class AuthController {
     res.json(user);
   }
 
-  public static async logout(req: Request, res: Response): Promise<void> {
+  public static async logout(req: CustomRequest, res: Response): Promise<void> {
     req.session.destroy(() => {
       res.sendStatus(200);
     });

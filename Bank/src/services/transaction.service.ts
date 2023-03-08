@@ -6,8 +6,8 @@ import { User } from "../models/user.model";
 
 export class TransactionService {
   public async transfer(
-    senderId: number,
-    receiverId: number,
+    senderId,
+    receiverId,
     amount: number
   ): Promise<Transaction> {
     const userRepository = getRepository(User);

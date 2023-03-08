@@ -16,7 +16,7 @@ export class UserService {
     return user;
   }
 
-  public async getById(userId: number): Promise<User> {
+  public async getById(userId): Promise<User> {
     const userRepository = getRepository(User);
 
     const user = await userRepository.findOneOrFail(userId);
@@ -24,7 +24,7 @@ export class UserService {
     return user;
   }
 
-  public async updateBalance(userId: number, amount: number): Promise<User> {
+  public async updateBalance(userId, amount: number): Promise<User> {
     const userRepository = getRepository(User);
 
     const user = await userRepository.findOneOrFail(userId);
